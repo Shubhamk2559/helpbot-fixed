@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>HelpBot Admin - Login</title>
+<link rel="stylesheet" href="/admin/static/panel.css">
+</head>
+<body>
+<div class="auth"><section class="card">
+  <h2>🔐 HelpBot Admin</h2>
+  <form id="f" autocomplete="off">
+    <label for="pw">Password</label>
+    <input id="pw" type="password" autocomplete="current-password" required maxlength="256">
+    <div id="totpbox" data-totp="__TOTP__" hidden>
+      <label for="totp">2FA code</label>
+      <input id="totp" inputmode="numeric" pattern="\d{6}" maxlength="6" autocomplete="one-time-code">
+    </div>
+    <button id="go" type="submit">Log in</button>
+    <div id="msg" role="alert"></div>
+  </form>
+</section></div>
+<script src="/admin/static/login.js" defer></script>
+</body>
+</html>
